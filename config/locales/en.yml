@@ -1,0 +1,27 @@
+en:
+  refinery:
+    plugins:
+      google_forms:
+        title: Google Forms
+    google_forms:
+      admin:
+        google_forms:
+          actions:
+            create_new: Add New Google Form
+            reorder: Reorder Google Forms
+            reorder_done: Done Reordering Google Forms
+          records:
+            title: Google Forms
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Google Forms yet. Click "Add New Google Form" to add your first google form.
+          google_form:
+            view_live_html: View this google form live <br/><em>(opens in a new window)</em>
+            edit: Edit this google form
+            delete: Remove this google form forever
+      google_forms:
+        show:
+          other: Other Google Forms
+  activerecord:
+    attributes:
+      'refinery/google_forms/google_form':
+        name: Name

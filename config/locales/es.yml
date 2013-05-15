@@ -1,0 +1,28 @@
+es:
+  refinery:
+    plugins:
+      google_forms:
+        title: Google Forms
+#        article: masculino/femenino
+    google_forms:
+      admin:
+        google_forms:
+          actions:
+            create_new: Crear nuevo google form
+            reorder: Reordenar google forms
+            reorder_done: Reordenación de google forms completada
+          records:
+            title: Google Forms
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay google forms todavía. Pulsa en "Crear nuevo Google Form" para crear tu primer google form.
+          google_form:
+            view_live_html: Ver este google form como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este google form
+            delete: Borrar este google form para siempre
+      google_forms:
+        show:
+          other: Otros google forms
+  activerecord:
+    attributes:
+      'refinery/google_forms/google_form':
+        name: Name

@@ -1,0 +1,29 @@
+zh-CN:
+  refinery:
+    plugins:
+      google_forms:
+        title: Google Forms
+    google_forms:
+      admin:
+        google_forms:
+          actions:
+            create_new: 建立新的 Google Form
+            reorder: 对 Google Forms 重新排序
+            reorder_done: 对 Google Forms 的重新排序结束
+          records:
+            title: Google Forms
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Google Forms yet. Click "Add New Google Form" to add your first google form.
+            no_items_yet: 目前没有 Google Forms . 点击 "Add New Google Form" 创建一个google form.
+          google_form:
+            view_live_html: 查看 google form 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 google form
+            delete: 永久删除 google form
+      google_forms:
+        show:
+          other: 其他 Google Forms
+  activerecord:
+    attributes:
+      'refinery/google_forms/google_form':
+        name: Name

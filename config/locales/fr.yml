@@ -1,0 +1,27 @@
+fr:
+  refinery:
+    plugins:
+      google_forms:
+        title: Google Forms
+    google_forms:
+      admin:
+        google_forms:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Google Form
+            reorder: Réordonner les Google Forms
+            reorder_done: Fin de réordonnancement des Google Forms
+          records:
+            title: Google Forms
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Google Form. Cliquer sur "Créer un(e) nouve(au/l/lle) Google Form" pour créer votre premi(er/ère) google form.'
+          google_form:
+            view_live_html: Voir ce(t/tte) google form <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) google form
+            delete: Supprimer définitivement ce(t/tte) google form
+      google_forms:
+        show:
+          other: Autres Google Forms
+  activerecord:
+    attributes:
+      'refinery/google_forms/google_form':
+        name: Name

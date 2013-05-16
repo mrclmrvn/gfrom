@@ -4,11 +4,13 @@ require "json"
 require 'digest/sha1'
 require "tmpdir"
 
-module GoogleForm
+class GoogleForm
+
+  attr_accessor :form, :fields
 
   MATCHERS = '//input[@type="text"] | //input[@type="hidden"] | //textarea | //form'
 
-  def self.new(url, path, reset = false)
+  def initialize(url, reset = false)
     @form = Hash.new
     @fields = []
 

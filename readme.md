@@ -1,10 +1,29 @@
-# Google Forms extension for Refinery CMS.
+# GoogleForm
 
-## How to build this extension as a gem
+TODO: Write a gem description
 
-    cd vendor/extensions/google_forms
-    gem build refinerycms-google_forms.gemspec
-    gem install refinerycms-google_forms.gem
+## Installation
 
-    # Sign up for a http://rubygems.org/ account and publish the gem
-    gem push refinerycms-google_forms.gem
+Add this line to your application's Gemfile:
+
+    gem 'redundant_math'
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install redundant_math
+
+## Usage
+
+TODO: Write usage instructions here
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request

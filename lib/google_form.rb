@@ -1,17 +1,16 @@
-
 require "curb"
 require "nokogiri"
 require "json"
 require 'digest/sha1'
 require "tmpdir"
 
-class GoogleForm
+module GoogleForm
 
   MATCHERS = '//input[@type="text"] | //input[@type="hidden"] | //textarea | //form'
 
-  def initialize(url, path, reset = false)
+  def self.new(url, path, reset = false)
     @form = Hash.new
-    @fields] = []
+    @fields = []
 
     cache = "#{Dir.tmpdir}/#{Digest::SHA1.hexdigest(url)}"
     File.delete cache if reset

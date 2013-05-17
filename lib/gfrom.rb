@@ -1,4 +1,10 @@
-class GoogleForm
+require "curb"
+require "nokogiri"
+require "json"
+require 'digest/sha1'
+require "tmpdir"
+
+class Gfrom
 
   attr_accessor :form, :fields
 

@@ -19,7 +19,6 @@ class Gfrom
     uri.query_values ||= Hash.new
     uri.query_values = uri.query_values.merge({"hl" => lang})
     url = uri.to_s
-    puts url
 
     cache = "#{Dir.tmpdir}/#{Digest::SHA1.hexdigest(url)}"
     if File.exists?(cache) and regenerate_cache

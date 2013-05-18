@@ -18,21 +18,21 @@ class Gfrom
     uri.query_values = uri.query_values.merge({"hl" => lang})
     url = uri.to_s
 
-    cache = "#{Dir.tmpdir}/#{Digest::SHA1.hexdigest(url)}"
-    if File.exists?(cache) and regenerate_cache
-      File.delete cache
+    @cache = "#{Dir.tmpdir}/#{Digest::SHA1.hexdigest(url)}"
+    if File.exists?(@cache) and regenerate_cache
+      File.delete @cache
     end
 
-    unless File.exists?(cache)
+    unless File.exists?(@cache)
       req = Curl.get(url)
-      File.open(cache, "w") do |f|
+      File.open(@cache, "w") do |f|
         f.write req.body_str
       end
     end
 
     keys = []
 
-    doc = Nokogiri::XML(File.open(cache))
+    doc = Nokogiri::XML(File.open(@cache))
     doc.search(MATCHERS).each do |node|
       case node.name
       when "form"
@@ -57,6 +57,7 @@ class Gfrom
     if success
       out[:message] = doc.search('//div[@class="ss-custom-resp"]').first.text.strip rescue doc.search('//title').first.text.strip
     else
+      File.open(@cache, "w") { |f| f.write response.body_str }
       out[:message] = errorheader.children.first.text.strip
     end
     out

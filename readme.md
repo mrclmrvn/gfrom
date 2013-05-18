@@ -25,11 +25,17 @@ GOOGLE_FORM_URL = "https://docs.google.com/a/myorganization.com/spreadsheet/embe
 @myform = Gfrom.new(GOOGLE_FORM_URL)
 # fields are stored in array of hashes
 # @fields=[
-#   {:element=>"input", :type=>"text", :name=>"entry.0.single", :value=>"", :class=>"ss-q-short", :id=>"entry_0", :label=>"Name", :required=>true},
-#   {:element=>"input", :type=>"text", :name=>"entry.2.single", :value=>"", :class=>"ss-q-short", :id=>"entry_2", :label=>"Email", :required=>true},
-#   {:element=>"textarea", :name=>"entry.1.single", :rows=>"8", :cols=>"75", :class=>"ss-q-long", :id=>"entry_1", :label=>"Message"},
-#   {:element=>"input", :type=>"hidden", :name=>"pageNumber", :value=>"0"},
-#   {:element=>"input", :type=>"hidden", :name=>"backupCache", :value=>""}
+#   {:element=>"input", :type=>"text", :name=>"entry.479273699", :value=>"", :class=>"ss-q-short", :id=>"entry_479273699", :label=>"First name\n\n*", :dir=>"auto", :"aria-required"=>"true"},
+#   {:element=>"input", :type=>"text", :name=>"entry.372120214", :value=>"", :class=>"ss-q-short", :id=>"entry_372120214", :label=>"Last name\n\n*", :dir=>"auto", :"aria-required"=>"true"},
+#   {:element=>"input", :type=>"text", :name=>"entry.1874514893", :value=>"", :class=>"ss-q-short", :id=>"entry_1874514893", :label=>"Middle name", :dir=>"auto"},
+#   {:element=>"input", :type=>"radio", :label=>"Male", :name=>"entry.1593861918", :value=>"Male", :id=>"group_1593861918_1", :class=>"ss-q-radio", :"aria-label"=>"Male"},
+#   {:element=>"input", :type=>"radio", :label=>"Female", :name=>"entry.1593861918", :value=>"Female", :id=>"group_1593861918_2", :class=>"ss-q-radio", :"aria-label"=>"Female"},
+#   {:element=>"input", :type=>"checkbox", :label=>"Ruby", :name=>"entry.299194237[]", :value=>"Ruby", :id=>"group_299194237_1", :class=>"ss-q-checkbox"},
+#   {:element=>"input", :type=>"checkbox", :label=>"PHP", :name=>"entry.299194237[]", :value=>"PHP", :id=>"group_299194237_2", :class=>"ss-q-checkbox"},
+#   {:element=>"input", :type=>"checkbox", :label=>"Django", :name=>"entry.299194237[]", :value=>"Django", :id=>"group_299194237_3", :class=>"ss-q-checkbox"},
+#   {:element=>"input", :type=>"checkbox", :label=>"Python", :name=>"entry.299194237[]", :value=>"Python", :id=>"group_299194237_4", :class=>"ss-q-checkbox"},
+#   {:element=>"input", :type=>"hidden", :name=>"draftResponse", :value=>"[] "},
+#   {:element=>"input", :type=>"hidden", :name=>"pageHistory", :value=>"0"}
 # ]
 puts @myform.fields
 # submit the form data to Google will return a hash

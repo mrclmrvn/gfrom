@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.platform      = Gem::Platform::RUBY
   spec.name          = "gfrom"
-  spec.version       = "0.0.1"
+  spec.version       = "0.1.1"
   spec.authors       = ["Marvin Marcelo"]
   spec.email         = ["mrclmrvn@gmail.com"]
   spec.description   = %q{Retrieve Google form and fields from a given form URL into array of hashes}

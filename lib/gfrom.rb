@@ -38,7 +38,7 @@ class Gfrom
         keys << n[:name]
       end
     end
-    @form[:keys] = keys.uniq
+    @form[:keys] = keys
 
   end
 
@@ -58,11 +58,15 @@ class Gfrom
   private
 
   def hash_it(node)
-    groups = ["checkbox", "radio"]
     object = Hash.new
     object[:element] = node.name
     node.attributes.each do |k,v|
-      object[k.to_sym] = v.value
+      # checkbox needs name to be array'ed
+      if (k == "name" and v.value == "checkbox" and node.search("//input[@name=\"#{v.value}\"]").length > 1)
+        object[k.to_sym] = "#{v.value}[]"
+      else
+        object[k.to_sym] = v.value
+      end
       if k == "id"
         label = node.search("//label[@for=\"#{v.value}\"]").first
         if label

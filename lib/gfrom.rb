@@ -58,11 +58,12 @@ class Gfrom
   private
 
   def hash_it(node)
+    group = ["checkbox", "radio"]
     object = Hash.new
     object[:element] = node.name
     node.attributes.each do |k,v|
-      # checkbox needs name to be array'ed
       if (k == "name" and v.value == "checkbox" and node.search("//input[@name=\"#{v.value}\"]").length > 1)
+        # checkbox needs name to be array'ed
         object[k.to_sym] = "#{v.value}[]"
       else
         object[k.to_sym] = v.value
@@ -73,6 +74,9 @@ class Gfrom
           object[:label] = label.children.first.text.strip
           object[:required] = true unless label.search("//label[@for=\"#{v.value}\"]/span[contains(@class, \"required\")]").empty?
         end
+      end
+      if object[:label].nil? and group.include?(object[:type])
+        object[:label] = node.attributes["value"].value
       end
     end
     object

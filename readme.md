@@ -48,8 +48,9 @@ result = @myform.submit(params)
 
 ## TODO
 
-* Support for Authenticated forms (requires login to organization/google apps)
+* Retain form values on unsuccesful submit
 * Label for grouped form tags - checkbox and radio
+* Support for Authenticated forms (requires login to organization/google apps)
 * Supply an RDOC
 * Tests
 

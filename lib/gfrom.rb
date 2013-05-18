@@ -62,12 +62,7 @@ class Gfrom
     object = Hash.new
     object[:element] = node.name
     node.attributes.each do |k,v|
-      if (k == "name" and v.value == "checkbox" and node.search("//input[@name=\"#{v.value}\"]").length > 1)
-        # checkbox needs name to be array'ed
-        object[k.to_sym] = "#{v.value}[]"
-      else
-        object[k.to_sym] = v.value
-      end
+      object[k.to_sym] = v.value
       if k == "id"
         label = node.search("//label[@for=\"#{v.value}\"]").first
         if label
@@ -79,6 +74,12 @@ class Gfrom
         object[:label] = node.attributes["value"].value
       end
     end
+    # override when element has all the attributes
+    if (object[:type] == "checkbox" and node.search("//input[@name=\"#{object[:name]}\"]").length > 1)
+      # checkbox needs name to be array'ed
+      object[:name] = "#{object[:name]}[]"
+    end
+
     object
   end
 

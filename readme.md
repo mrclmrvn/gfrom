@@ -41,7 +41,7 @@ result = @myform.submit(params)
 ## TODO
 
 * Support for Authenticated forms (requires login to organization/google apps)
-* <del>Ensure radio buttons and checkboxes are grouped (not sure if this works in current version - 0.1.2)</del>
+* ~~Ensure radio buttons and checkboxes are grouped (not sure if this works in current version - 0.1.2)~~
 * Label for grouped form tags - checkbox and radio
 * Supply an RDOC
 * Tests

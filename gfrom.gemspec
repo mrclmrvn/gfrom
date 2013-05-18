@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.platform      = Gem::Platform::RUBY
   spec.name          = "gfrom"
-  spec.version       = "0.1.2"
+  spec.version       = "0.1.4.pre"
   spec.authors       = ["Marvin Marcelo"]
   spec.email         = ["mrclmrvn@gmail.com"]
   spec.description   = %q{Render unathenticated Google Form in your website. Useful for collecting data from your users without a database. Just create a google form from your google account. If you are using Google Apps, please read form options}

@@ -30,7 +30,7 @@ class Gfrom
     doc.search(MATCHERS).each do |node|
       case node.name
       when "form"
-        @form[:action] = node.attributes["action"].value unless @form.empty?
+        @form[:action] = node.attributes["action"].value unless @form.has_key?(:action)
       else
         n = hash_it(node)
         @fields << n

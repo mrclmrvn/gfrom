@@ -57,7 +57,6 @@ class Gfrom
     if success
       out[:message] = doc.search('//div[@class="ss-custom-resp"]').first.text.strip rescue doc.search('//title').first.text.strip
     else
-      File.open(@cache, "w") { |f| f.write response.body_str }
       out[:message] = errorheader.children.first.text.strip
     end
     out

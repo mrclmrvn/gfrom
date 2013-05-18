@@ -28,7 +28,8 @@ GOOGLE_FORM_URL = "https://docs.google.com/a/myorganization.com/spreadsheet/embe
 #   {:element=>"input", :type=>"text", :name=>"entry.0.single", :value=>"", :class=>"ss-q-short", :id=>"entry_0", :label=>"Name", :required=>true},
 #   {:element=>"input", :type=>"text", :name=>"entry.2.single", :value=>"", :class=>"ss-q-short", :id=>"entry_2", :label=>"Email", :required=>true},
 #   {:element=>"textarea", :name=>"entry.1.single", :rows=>"8", :cols=>"75", :class=>"ss-q-long", :id=>"entry_1", :label=>"Message"},
-#   {:element=>"input", :type=>"hidden", :name=>"pageNumber", :value=>"0"}, {:element=>"input", :type=>"hidden", :name=>"backupCache", :value=>""}
+#   {:element=>"input", :type=>"hidden", :name=>"pageNumber", :value=>"0"},
+#   {:element=>"input", :type=>"hidden", :name=>"backupCache", :value=>""}
 # ]
 puts @myform.fields
 # submit the form data to Google will return a hash
@@ -40,7 +41,7 @@ result = @myform.submit(params)
 ## TODO
 
 * Support for Authenticated forms (requires login to organization/google apps)
-* Radio buttons and checkboxes (not sure if this will work on current version - 0.1.0)
+* Ensure radio buttons and checkboxes are grouped (not sure if this works in current version - 0.1.2)
 * Supply an RDOC
 * Tests
 

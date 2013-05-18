@@ -47,7 +47,8 @@ class Gfrom
     doc = Nokogiri::XML.parse(response.body_str)
     errorheader = doc.search('//div[@class="errorheader"]')
     success = errorheader.empty?
-    out = { :success => success, :message => doc.search('//title').first.text.strip }
+    success_response = doc.search('//div[@class="ss-custom-resp"]').first.text.strip
+    out = { :success => success, :message => success_response || doc.search('//title').first.text.strip }
     unless success
       out[:message] = errorheader.children.first.text.strip
     end

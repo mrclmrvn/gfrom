@@ -12,7 +12,6 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{From Google Form}
   spec.homepage      = "https://bitbucket.org/mrclmrvn/gfrom/"
   spec.license       = "MIT"
-  spec.date         = '2013-05-01'
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }

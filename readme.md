@@ -35,7 +35,7 @@ result = @myform.submit(params)
 # or false otherwise, and an error message, which would probably unsatisfied required fields
 ```
 
-# TODO
+## TODO
 
 * Support for Authenticated forms (requires login to organization/google apps)
 * Radio buttons and checkboxes (not sure if this will work on current version - 0.1.0)

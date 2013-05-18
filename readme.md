@@ -1,12 +1,14 @@
 # Gfrom (From Google Form)
 
-Render unathenticated Google Form in your website. Useful for collecting data from your users without a database. Just create a google form from your google account
+Render unathenticated Google Form in your website. Useful for collecting data from your users without a database. Just create a google form from your google account. If you are using Google Apps, please read [form options](http://support.google.com/drive/bin/answer.py?hl=en&answer=160166).
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'gfrom'
+```ruby
+gem 'gfrom'
+```
 
 And then execute:
 

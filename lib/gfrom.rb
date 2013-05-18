@@ -7,8 +7,6 @@ require "tmpdir"
 
 class Gfrom
 
-  attr_accessor :form, :fields
-
   MATCHERS = '//input[@type="text"] | //input[@type="radio"] | //input[@type="checkbox"] | //input[@type="hidden"] | //textarea | //form'
 
   def initialize(url, regenerate_cache = false, lang = 'en')

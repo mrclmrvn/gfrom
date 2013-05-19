@@ -48,6 +48,16 @@ class Gfrom
 
   end
 
+  def self.locale_url(url, lang = 'en')
+    uri = Addressable::URI.parse(url)
+    if uri.to_hash.select{|k,v| [:scheme, :host].include? k }.values.any?{|v| v.nil? || v.length == 0}
+      raise "Invalid URI"
+    end
+    uri.query_values ||= Hash.new
+    uri.query_values = uri.query_values.merge({"hl" => lang})
+    uri.to_s
+  end
+
   def submit(params)
     response = Curl.post(@form[:action], params)
     doc = Nokogiri::XML.parse(response.body_str)

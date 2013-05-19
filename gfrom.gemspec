@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.platform      = Gem::Platform::RUBY
   spec.name          = "gfrom"
-  spec.version       = "0.1.9.pre"
+  spec.version       = "0.1.9"
   spec.authors       = ["Marvin Marcelo"]
   spec.email         = ["mrclmrvn@gmail.com"]
   spec.description   = %q{Wrap Google Form within your site}

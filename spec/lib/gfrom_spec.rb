@@ -12,10 +12,22 @@ describe Gfrom do
       end
     end
     context "attributes" do
-      let(:form_url) { "https://docs.google.com/forms/d/1GkTDyoRCGTYXHy5kt2TDwtpr63H0b8Zyd_SWaBHwl30/viewform" }
-      subject { Gfrom.new(form_url) }
+      before do
+        @url = "https://testdocs.google.com/forms/d/1GkTDyoRCGTYXHy5kt2TDwtpr63H0b8Zyd_SWaBHwl30/viewform?hl=en"
+        stub_request(:get, @url).to_return(:body => File.open("spec/support/gfrom/form_default.html").read)
+      end
+      subject { Gfrom.new(@url) }
       it { should respond_to(:fields) }
       it { should respond_to(:form) }
+    end
+
+    describe "#submit" do
+      context "success" do
+        pending
+      end
+      context "error" do
+        pending
+      end
     end
   end
 

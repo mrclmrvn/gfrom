@@ -11,6 +11,12 @@ describe Gfrom do
         }.to raise_exception
       end
     end
+    context "attributes" do
+      let(:form_url) { "https://docs.google.com/forms/d/1GkTDyoRCGTYXHy5kt2TDwtpr63H0b8Zyd_SWaBHwl30/viewform" }
+      subject { Gfrom.new(form_url) }
+      it { should respond_to(:fields) }
+      it { should respond_to(:form) }
+    end
   end
 
   describe "Gfrom::local_url" do

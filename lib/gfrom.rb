@@ -7,16 +7,15 @@ require "tmpdir"
 
 class Gfrom
 
+  attr_accessor :fields, :form
+
   MATCHERS = '//input[@type="text"] | //input[@type="radio"] | //input[@type="checkbox"] | //input[@type="hidden"] | //textarea | //form'
 
   def initialize(url, regenerate_cache = false, lang = 'en')
     @form = Hash.new
     @fields = []
 
-    uri = Addressable::URI.parse(url)
-    uri.query_values ||= Hash.new
-    uri.query_values = uri.query_values.merge({"hl" => lang})
-    url = uri.to_s
+    url = Gfrom::locale_url(url, lang)
 
     @cache = "#{Dir.tmpdir}/#{Digest::SHA1.hexdigest(url)}"
     if File.exists?(@cache) and regenerate_cache

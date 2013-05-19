@@ -50,6 +50,7 @@ result = @myform.submit(params)
 
 * Retain form values on unsuccesful submit
 * Fields with error after submit
+* Warn or raise exception if form is disabled (Accepting Responses is unchecked)
 * Label for grouped form tags - checkbox and radio
 * Support for getting select form tag (use radio button for now)
 * Support for Authenticated forms (requires login to organization/google apps)

@@ -46,11 +46,28 @@ result = @myform.submit(params)
 # or false otherwise, and an error message, which would probably unsatisfied required fields
 ```
 
+In haml:
+
+```haml
+- @myform.fields.each do |node|
+  - if node[:type] != "hidden"
+    .inputline
+      - element = node.delete(:element)
+      %label{:for => node[:id]}=node[:label] if node[:label]
+      - if element == "input"
+        %input{node}
+      - if element == "textarea"
+        %textarea{node}
+  - else
+    %input{node}
+```
+
 ## TODO
 
 * Retain form values on unsuccesful submit
 * Fields with error after submit
 * Warn or raise exception if form is disabled (Accepting Responses is unchecked)
+* Provide a sample template for rails app
 * Label for grouped form tags - checkbox and radio
 * Support for getting select form tag (use radio button for now)
 * Support for Authenticated forms (requires login to organization/google apps)

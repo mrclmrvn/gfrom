@@ -5,12 +5,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.platform      = Gem::Platform::RUBY
   spec.name          = "gfrom"
-  spec.version       = "0.2.02"
+  spec.version       = "0.2.03"
   spec.authors       = ["Marvin Marcelo"]
   spec.email         = ["mrclmrvn@gmail.com"]
   spec.description   = %q{Wrap Google Form within your site}
   spec.summary       = %q{From Google Form}
-  spec.homepage      = "https://bitbucket.org/mrclmrvn/gfrom/"
+  spec.homepage      = "http://www.marvinmarcelo.com/gfrom-from-google-form/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

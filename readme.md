@@ -2,7 +2,7 @@
 
 Wrap Google Form in your website. Useful for collecting data from your users without a database, and if you hate country restrictions of the form services out there. Plus you can style it your on way.
 
-Just create a form from your google account and copy the published URL. If you are using Google Apps, please read [form options](http://support.google.com/drive/bin/answer.py?hl=en&answer=160166), make sure `require sign-in` is unchecked.
+Just create a form from your google account and copy the published URL. If you are using Google Apps, please read [form options](http://support.google.com/drive/bin/answer.py?hl=en&answer=160166), make sure `Require sign-in to view this form` is unchecked.
 
 ## Installation
 

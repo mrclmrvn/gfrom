@@ -72,7 +72,6 @@ In haml:
 * Support for getting select form tag (use radio button for now)
 * Support for Authenticated forms (requires login to organization/google apps)
 * Supply an RDOC
-* Tests
 
 ## Contributing
 

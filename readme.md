@@ -73,6 +73,12 @@ In haml:
 * Support for Authenticated forms (requires login to organization/google apps)
 * Supply an RDOC
 
+## Good to have
+
+```ruby
+<%= f.send(field.type.to_sym, field.name) %>
+```
+
 ## Contributing
 
 1. Fork it
